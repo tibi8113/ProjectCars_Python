@@ -11,6 +11,13 @@ class Car():
     def __str__(self):
         return "Car - Make: %s, Model: %s, Color: %s, Fuel: %s" % (self.make, self.model, self.color, self.fuel_level)
 
+    cars = {
+        car1 = ['Audi', 'A7', 2017, 'Red']
+        car2 = ['Ford', 'Mustang', 2017, 'White']
+        car3 = ['Tesla', 'S', 2017, 'White']
+        car4 = ['Volkswaggen', 'Passat GTE', 2017, 'Grey']
+    }
+
     #Repostar
     def add_fuel(self, amount):
         """Add fuel to the tank."""
@@ -34,12 +41,11 @@ class WareHouse():
         self.location = location
         self.cars = []
 
-    
     def add_car(self, car):
         #Añadir un coche al WareHouse.
         self.cars.append(car)
-
     
     def remove_car(self, car):
         #Quitar un coche del WareHouse.
         self.cars.append(car)
+
