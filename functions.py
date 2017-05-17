@@ -12,10 +12,10 @@ class Car():
         return "Car - Make: %s, Model: %s, Color: %s, Fuel: %s" % (self.make, self.model, self.color, self.fuel_level)
 
     cars = {
-        car1 = ['Audi', 'A7', 2017, 'Red']
-        car2 = ['Ford', 'Mustang', 2017, 'White']
-        car3 = ['Tesla', 'S', 2017, 'White']
-        car4 = ['Volkswaggen', 'Passat GTE', 2017, 'Grey']
+        "car1" : ['Audi', 'A7', 2017, 'Red'],
+        "car2" : ['Ford', 'Mustang', 2017, 'White'],
+        "car3" : ['Tesla', 'S', 2017, 'White'],
+        "car4" : ['Volkswaggen', 'Passat GTE', 2017, 'Grey'],
     }
 
     #Repostar
