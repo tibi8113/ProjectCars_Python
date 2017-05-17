@@ -13,7 +13,7 @@ my_electric_car2 = f.ElectricCar('Passat', 'GTE', 2017, 'Grey')
 """-----------------------------------------------------------------------------------------------------------------------------------"""
 
 #Crear almacen.
-myWareHouse1 = WareHouse('MTC', 'Munich')
+myWareHouse1 = f.WareHouse('MTC', 'Munich')
 
 #Añadir los coches al almacen.
 myWareHouse1.add_car(my_car1)
