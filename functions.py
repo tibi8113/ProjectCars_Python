@@ -12,10 +12,10 @@ class Car():
         return "Car - Make: %s, Model: %s, Color: %s, Fuel: %s" % (self.make, self.model, self.color, self.fuel_level)
 
     cars = {
-        "car1" : ['Audi', 'A7', 2017, 'Red'],
-        "car2" : ['Ford', 'Mustang', 2017, 'White'],
-        "car3" : ['Tesla', 'S', 2017, 'White'],
-        "car4" : ['Volkswaggen', 'Passat GTE', 2017, 'Grey'],
+        'car1' : ['Audi', 'A7', 2017, 'Red'],
+        'car2' : ['Ford', 'Mustang', 2017, 'White'],
+        'car3' : ['Tesla', 'S', 2017, 'White'],
+        'car4' : ['Volkswaggen', 'Passat GTE', 2017, 'Grey'],
     }
 
     #Repostar
@@ -26,6 +26,10 @@ class Car():
             print("Added fuel to "+ self.make + ".")
         else:
             print("The tank won't hold that much.")
+
+    def_print_cars():
+        for c,p in cars.items():
+            return cars
 
 class ElectricCar(Car):
     def __init__(self, make, model, year, color):
@@ -48,4 +52,7 @@ class WareHouse():
     def remove_car(self, car):
         #Quitar un coche del WareHouse.
         self.cars.append(car)
+    
+
+
 
