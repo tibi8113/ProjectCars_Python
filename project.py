@@ -35,5 +35,5 @@ print('Estos son los coches disponibles: ' + f.cars[car1])
 my_car1.add_fuel(50)
 '''
 
-#print("Make: " + my_car.make + "; " + "Model: " + my_car.model + "; " + "Color: " + my_car.color)
-#print("Make: " + my_car2.make + "; " + "Model: " + my_car2.model + "; " + "Color: " + my_car2.color)
+for coche in myWareHouse1.cars
+    print(coche.make)
