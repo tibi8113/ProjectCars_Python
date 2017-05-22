@@ -25,8 +25,6 @@ myWareHouse1.add_car(my_electric_car2)
 
 print('¿En qué coche estás interesado?')
 #Imprimir Todos los coches (solo marca)
-print('Estos son los coches disponibles: ' + f.cars[car1])
-
 
 """-----------------------------------------------------------------------------------------------------------------------------------"""
 
