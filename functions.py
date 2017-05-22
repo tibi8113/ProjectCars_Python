@@ -1,10 +1,11 @@
 class Car():
 
-    def __init__(self, make, model, year, color='White'):
+    def __init__(self, make, model, year, color='White', price):
         self.make = make
         self.model = model
         self.year = year
         self.color = color
+        self.price = price
         self.fuel_capacity = 100
         self.fuel_level = 0
 
@@ -51,14 +52,12 @@ class WareHouse():
         for c in self.cars:
             s += c.make + " " + c.model + " " + c.color + "/n"
         return s
-'''
-'''
+
 #Métono alternativo para imprimir coches con un print
     def print_all_cars(self):
         for coche in self.cars:
             print(coche.make)
-'''    
-'''
+
     cars = {
         'car1' : ['Audi', 'A7', 2017, 'Red'],
         'car2' : ['Ford', 'Mustang', 2017, 'White'],
