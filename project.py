@@ -20,6 +20,7 @@ my_electric_car4 = f.ElectricCar('Volkswagen', 'Golf GTE', 2017, 'Dark Iron', 40
 
 #Crear almacen.
 myWareHouse1 = f.WareHouse('MTC', 'Munich')
+myWareHouse2 = f.WareHouse('MTC.E', 'Munich')
 """
 #Añadir los coches al almacen.
 myWareHouse1.add_car(my_car1)
@@ -33,6 +34,7 @@ myWareHouse1.add_car(my_electric_car2)
 """
 
 """-----------------------------------------------------------------------------------------------------------------------------------"""
+"""
 opc = input("1.Ver catálogo\n2.Comprar coche\n")
 
 print('¿En qué coche estás interesado?')
@@ -53,6 +55,22 @@ elif opc == "TESLA":
 elif opc == "PASSAT":
     print(my_electric_car3)
     print(my_electric_car4)
+"""
+"""-----------------------------------------------------------------------------------------------------------------------------------"""
+
+car = car(c["Make"],
+    c["Model"],
+    c["Year"],
+    c["Color"],
+    c["Price"],
+    c["Type"])
+
+for c in d.cars:
+    if c["Type"] == "Electric":
+        myWareHouse2.add_car(car)
+    else:
+        myWareHouse1.add_car(car)
+
 """-----------------------------------------------------------------------------------------------------------------------------------"""
 
 '''

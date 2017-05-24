@@ -1,16 +1,17 @@
 class Car():
 
-    def __init__(self, make, model, year, color, price):
+    def __init__(self, make, model, year, color, price, tipo):
         self.make = make
         self.model = model
         self.year = year
         self.color = color
         self.price = price
+        self.type = tipo
         self.fuel_capacity = 100
         self.fuel_level = 0
 
     def __str__(self):
-        return "Car - Make: %s, Model: %s, Color: %s, Price: %s euros" % (self.make, self.model, self.color, self.price)
+        return "Car - Make: %s, Model: %s, Color: %s, Price: %s euros, Type: %s" % (self.make, self.model, self.color, self.price, self.tipo)
 
 
     #Repostar
@@ -23,8 +24,8 @@ class Car():
             print("The tank won't hold that much.")
 
 class ElectricCar(Car):
-    def __init__(self, make, model, year, color, price):
-        super().__init__(make, model, year, color, price)
+    def __init__(self, make, model, year, color, price, tipo):
+        super().__init__(make, model, year, color, price, tipo)
         #Tamaño de la bateria.
         self.battery_size = 100
         #Nivel de bateria en %.
