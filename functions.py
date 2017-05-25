@@ -59,12 +59,6 @@ class WareHouse():
         for coche in self.cars:
             print(coche.make)
 
-    cars = {
-        'car1' : ['Audi', 'A7', 2017, 'Red'],
-        'car2' : ['Ford', 'Mustang', 2017, 'White'],
-        'car3' : ['Tesla', 'S', 2017, 'White'],
-        'car4' : ['Volkswaggen', 'Passat GTE', 2017, 'Grey'],
-    }
 '''
 
 
