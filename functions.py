@@ -11,7 +11,7 @@ class Car():
         self.fuel_level = 0
 
     def __str__(self):
-        return "Car - Make: %s, Model: %s, Color: %s, Price: %s euros, Type: %s" % (self.make, self.model, self.color, self.price, self.tipo)
+        return "Car - Make: %s, Model: %s, Color: %s, Price: %s euros, Type: %s" % (self.make, self.model, self.color, self.price, self.type)
 
 
     #Repostar
@@ -45,6 +45,26 @@ class WareHouse():
         #Quitar un coche del WareHouse.
         self.cars.append(car)
 
+
+class Cars():
+    def __init__(self, d):
+        self.cars = []
+    def __str__(self):
+        return self.cars
+
+        for c in d.cars:
+            car = Car(c["Make"], c["Model"], c["Year"], c["Color"], c["Price"], c["Type"])
+            self.cars.append(car)
+
+    def find_car(self, make):
+        list_cars = []
+        for c in self.cars:
+            if c.make == make:
+                list_cars.append(c)
+        return list_cars
+
+
+    
     
 '''
 #Método alternativo para imprimir coches    

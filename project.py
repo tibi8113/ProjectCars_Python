@@ -2,39 +2,57 @@ import functions as f
 import data as d
 
 """-----------------------------------------------------------------------------------------------------------------------------------"""
-"""
-#Crear coches.
-my_car1 = f.Car('Audi', 'A7', 2017, 'Red', 66000)
-my_car2 = f.Car('Audi', 'Q7', 2017, 'Grey', 65000)
-my_car3 = f.Car('Ford', 'Mustang', 2017, 'White', 45000)
-my_car4 = f.Car('Ford', 'Focus RS', 2017, 'Blue', 40000)
-my_electric_car1 = f.ElectricCar('Tesla', 'S' , 2017, 'Deep Blue', 85000)
-my_electric_car2 = f.ElectricCar('Tesla', 'X', 2017, 'White', 97000)
-my_electric_car3 = f.ElectricCar('Volkswagen', 'Passat GTE', 2017, 'Grey', 48000)
-my_electric_car4 = f.ElectricCar('Volkswagen', 'Golf GTE', 2017, 'Dark Iron', 40000)
-"""
-
-"""-----------------------------------------------------------------------------------------------------------------------------------"""
-
-"""-----------------------------------------------------------------------------------------------------------------------------------"""
 
 #Crear almacen.
 myWareHouse1 = f.WareHouse('MTC', 'Munich')
 myWareHouse2 = f.WareHouse('MTC.E', 'Munich')
-"""
-#Añadir los coches al almacen.
-myWareHouse1.add_car(my_car1)
-myWareHouse1.add_car(my_car2)
-myWareHouse1.add_car(my_car3)
-myWareHouse1.add_car(my_car4)
-myWareHouse1.add_car(my_electric_car1)
-myWareHouse1.add_car(my_electric_car2)
-myWareHouse1.add_car(my_electric_car2)
-myWareHouse1.add_car(my_electric_car2)
-"""
 
 """-----------------------------------------------------------------------------------------------------------------------------------"""
+
+#Meter los coches en los almacenes correspondientes
+all_cars = f.Cars(d)
+for c in all_cars.cars:
+    if c.type == "Electric":
+        myWareHouse2.add_car(c)
+    else:
+        myWareHouse1.add_car(c)
+
+#Opciones
+opc = input("1.Ver catálogo\n2.Comprar coche\n")
+
+if opc == "1":
+    print (myWareHouse1.name)
+    for coche in myWareHouse1.cars:
+        print(coche)
+
+    print ("-------------------------------------------------------------------------------------")
+
+    print (myWareHouse2.name)
+    for coche in myWareHouse2.cars:
+        print(coche)
+
+elif opc == "2":
+    print(f.Cars.find_car)
+    if opc == "AUDI":
+        pass
+    elif opc == "FORD":
+        pass
+    elif opc == "TESLA":
+        pass
+    elif opc == "PASSAT":
+        pass
+
+
+        
+
+
+"""-----------------------------------------------------------------------------------------------------------------------------------"""
+
 """
+#Añadir combustible.
+my_car1.add_fuel(50)
+
+
 opc = input("1.Ver catálogo\n2.Comprar coche\n")
 
 print('¿En qué coche estás interesado?')
@@ -56,25 +74,4 @@ elif opc == "PASSAT":
     print(my_electric_car3)
     print(my_electric_car4)
 """
-"""-----------------------------------------------------------------------------------------------------------------------------------"""
-
-car = car(c["Make"],
-    c["Model"],
-    c["Year"],
-    c["Color"],
-    c["Price"],
-    c["Type"])
-
-for c in d.cars:
-    if c["Type"] == "Electric":
-        myWareHouse2.add_car(car)
-    else:
-        myWareHouse1.add_car(car)
-
-"""-----------------------------------------------------------------------------------------------------------------------------------"""
-
-'''
-#Añadir combustible.
-my_car1.add_fuel(50)
-'''
 
