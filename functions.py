@@ -49,8 +49,6 @@ class WareHouse():
 class Cars():
     def __init__(self, d):
         self.cars = []
-    def __str__(self):
-        return self.cars
 
         for c in d.cars:
             car = Car(c["Make"], c["Model"], c["Year"], c["Color"], c["Price"], c["Type"])

@@ -32,9 +32,14 @@ if opc == "1":
         print(coche)
 
 elif opc == "2":
+    opc2 = input("¿En que coche estás interesado?\n")
+    print ("-------------------------------------------------------------------------------------")
+
     print(f.Cars.find_car)
     if opc == "AUDI":
-        pass
+        for c in all_cars.cars:
+            if c.make == "AUDI":
+                print()
     elif opc == "FORD":
         pass
     elif opc == "TESLA":
