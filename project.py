@@ -32,21 +32,19 @@ if opc == "1":
         print(coche)
 
 elif opc == "2":
-    opc2 = input("¿En que coche estás interesado?\n")
+    opc2 = input("¿En que marca de coche estás interesado?\n").title()
     print ("-------------------------------------------------------------------------------------")
 
-    print(f.Cars.find_car)
-    if opc == "AUDI":
-        for c in all_cars.cars:
-            if c.make == "AUDI":
-                print()
-    elif opc == "FORD":
-        pass
-    elif opc == "TESLA":
-        pass
-    elif opc == "PASSAT":
-        pass
+#Coger marca introducida e imprimir los coches de esa misma marca.
+    lista_coches = all_cars.find_car(opc2)
+    for c in lista_coches:
+        print(c)
 
+    opc3 = input("¿Que modelo deseas?\n")
+    print ("-------------------------------------------------------------------------------------")
+    listar_modelo = all_cars.find_car_model(opc3)
+    for m in listar_modelo:
+        print(m)
 
         
 
@@ -54,6 +52,11 @@ elif opc == "2":
 """-----------------------------------------------------------------------------------------------------------------------------------"""
 
 """
+    if opc2 == "AUDI":
+        for c in all_cars.cars:
+            if c.make == "Audi":
+                print(c)
+
 #Añadir combustible.
 my_car1.add_fuel(50)
 

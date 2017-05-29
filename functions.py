@@ -61,6 +61,13 @@ class Cars():
                 list_cars.append(c)
         return list_cars
 
+    def find_car_model(self, model):
+        list_car = []
+        for c in self.cars:
+            if c.model == model:
+                list_car.append(c)
+        return list_car
+
 
     
     
