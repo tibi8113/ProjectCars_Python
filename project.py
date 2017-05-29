@@ -4,8 +4,8 @@ import data as d
 """-----------------------------------------------------------------------------------------------------------------------------------"""
 
 #Crear almacen.
-myWareHouse1 = f.WareHouse('MTC', 'Munich')
-myWareHouse2 = f.WareHouse('MTC.E', 'Munich')
+myWareHouse1 = f.WareHouse('WareHouse1', 'Munich')
+myWareHouse2 = f.WareHouse('WareHouse2', 'Munich')
 
 """-----------------------------------------------------------------------------------------------------------------------------------"""
 
@@ -21,12 +21,14 @@ for c in all_cars.cars:
 opc = input("1.Ver catálogo\n2.Comprar coche\n")
 
 if opc == "1":
+    #Imprimir todos los coches del WareHouse1
     print (myWareHouse1.name)
     for coche in myWareHouse1.cars:
         print(coche)
 
     print ("-------------------------------------------------------------------------------------")
 
+    #Imprimir todos los coches del WareHouse2
     print (myWareHouse2.name)
     for coche in myWareHouse2.cars:
         print(coche)
@@ -35,7 +37,7 @@ elif opc == "2":
     opc2 = input("¿En que marca de coche estás interesado?\n").title()
     print ("-------------------------------------------------------------------------------------")
 
-#Coger marca introducida e imprimir los coches de esa misma marca.
+    #Coger marca introducida e imprimir los coches de esa misma marca.
     lista_coches = all_cars.find_car(opc2)
     for c in lista_coches:
         print(c)
@@ -43,8 +45,16 @@ elif opc == "2":
     opc3 = input("¿Que modelo deseas?\n")
     print ("-------------------------------------------------------------------------------------")
     listar_modelo = all_cars.find_car_model(opc3)
+    
     for m in listar_modelo:
         print(m)
+
+    opc4 = input("1.Lo quiero de serie\n2.Me gustaría personalizarlo\n")
+    
+
+
+
+    
 
         
 

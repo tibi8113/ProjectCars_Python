@@ -11,7 +11,7 @@ class Car():
         self.fuel_level = 0
 
     def __str__(self):
-        return "Car - Make: %s, Model: %s, Color: %s, Price: %s euros, Type: %s" % (self.make, self.model, self.color, self.price, self.type)
+        return "Car - Make: %s, Model: %s, Color: %s, Type: %s, Price: %s euros" % (self.make, self.model, self.color, self.type, self.price)
 
 
     #Repostar
