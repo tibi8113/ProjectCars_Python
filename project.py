@@ -1,6 +1,46 @@
 import functions as f
 import data as d
 
+def menu2():
+    opc2 = input("¿En que marca de coche estás interesado?\n").title()
+    print ("-------------------------------------------------------------------------------------")
+
+    #Coger marca introducida e imprimir los coches de esa misma marca.
+    lista_coches = all_cars.find_car(opc2)
+    for c in lista_coches:
+        print(c)
+
+    opc3 = input("¿Que modelo deseas?\n")
+    print ("-------------------------------------------------------------------------------------")
+    coche_seleccionado = all_cars.find_car_model(opc3)
+
+    print(coche_seleccionado)
+        
+    opc4 = input("1.Lo quiero de serie\n2.Me gustaría personalizarlo\n")
+
+    if opc4 == "1":
+        print("El precio es " + str(coche_seleccionado.price))
+    elif opc4 == "2":
+        print("El precio es " + str(coche_seleccionado.price) + "+ 15% = " + str(coche_seleccionado.price * 1.15))
+
+
+def menu1():
+    #Imprimir todos los coches del WareHouse1
+    print (myWareHouse1.name)
+    for coche in myWareHouse1.cars:
+        print(coche)
+
+    print ("-------------------------------------------------------------------------------------")
+
+    #Imprimir todos los coches del WareHouse2
+    print (myWareHouse2.name)
+    for coche in myWareHouse2.cars:
+        print(coche)
+    menu2    
+
+
+
+
 """-----------------------------------------------------------------------------------------------------------------------------------"""
 
 #Crear almacen.
@@ -15,58 +55,28 @@ for c in all_cars.cars:
     if c.type == "Electric":
         myWareHouse2.add_car(c)
     else:
-        myWareHouse1.add_car(c)
+        myWareHouse1.add_car(c) 
 
 #Opciones
 opc = input("1.Ver catálogo\n2.Comprar coche\n")
 
 if opc == "1":
-    #Imprimir todos los coches del WareHouse1
-    print (myWareHouse1.name)
-    for coche in myWareHouse1.cars:
-        print(coche)
-
-    print ("-------------------------------------------------------------------------------------")
-
-    #Imprimir todos los coches del WareHouse2
-    print (myWareHouse2.name)
-    for coche in myWareHouse2.cars:
-        print(coche)
-
-elif opc == "2":
-    opc2 = input("¿En que marca de coche estás interesado?\n").title()
-    print ("-------------------------------------------------------------------------------------")
-
-    #Coger marca introducida e imprimir los coches de esa misma marca.
-    lista_coches = all_cars.find_car(opc2)
-    for c in lista_coches:
-        print(c)
-
-    opc3 = input("¿Que modelo deseas?\n")
-    print ("-------------------------------------------------------------------------------------")
-    listar_modelo = all_cars.find_car_model(opc3)
-    
-    for m in listar_modelo:
-        print(m)
-        
-    opc4 = input("1.Lo quiero de serie\n2.Me gustaría personalizarlo\n")
-
-if opc4 == "1":
-    listar_modelo = all_cars.find_car_price(opc3)
-    for c in lista_coches:
-        print(c)
+    menu1()
 
 
-elif opc4 == "2":
-    pass
-
-    
+    menu2()
 
 
 
-    
 
-        
+
+
+
+
+
+
+
+
 
 
 """-----------------------------------------------------------------------------------------------------------------------------------"""

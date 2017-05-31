@@ -66,14 +66,7 @@ class Cars():
         for c in self.cars:
             if c.model == model:
                 list_car.append(c)
-        return list_car
-
-    def find_car_price(self, price):
-        list_price = []
-        for c in self.cars:
-            if c.price == price:
-                list_price.append(c)
-        return price
+        return list_car[0]
 
 
     
