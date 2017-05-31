@@ -48,8 +48,18 @@ elif opc == "2":
     
     for m in listar_modelo:
         print(m)
-
+        
     opc4 = input("1.Lo quiero de serie\n2.Me gustaría personalizarlo\n")
+
+if opc4 == "1":
+    listar_modelo = all_cars.find_car_price(opc3)
+    for c in lista_coches:
+        print(c)
+
+
+elif opc4 == "2":
+    pass
+
     
 
 
