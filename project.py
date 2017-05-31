@@ -19,9 +19,11 @@ def menu2():
     opc4 = input("1.Lo quiero de serie\n2.Me gustaría personalizarlo\n")
 
     if opc4 == "1":
-        print("El precio es " + str(coche_seleccionado.price))
+        print("El precio es " + str(coche_seleccionado.price),"euros.")
     elif opc4 == "2":
-        print("El precio es " + str(coche_seleccionado.price) + "+ 15% = " + str(coche_seleccionado.price * 1.15))
+        print("¿Que deseas añadirle?")
+        personalizar1 = input("1.Deposito lleno?\n")
+        
 
 
 def menu1():
@@ -47,7 +49,7 @@ def menu1():
 myWareHouse1 = f.WareHouse('WareHouse1', 'Munich')
 myWareHouse2 = f.WareHouse('WareHouse2', 'Munich')
 
-"""-----------------------------------------------------------------------------------------------------------------------------------"""
+
 
 #Meter los coches en los almacenes correspondientes
 all_cars = f.Cars(d)
@@ -57,6 +59,7 @@ for c in all_cars.cars:
     else:
         myWareHouse1.add_car(c) 
 
+"""-----------------------------------------------------------------------------------------------------------------------------------"""
 #Opciones
 opc = input("1.Ver catálogo\n2.Comprar coche\n")
 
@@ -82,6 +85,8 @@ if opc == "1":
 """-----------------------------------------------------------------------------------------------------------------------------------"""
 
 """
+print("El precio es " + str(coche_seleccionado.price) + "+ 15% = " + str(coche_seleccionado.price * 1.15))
+
     if opc2 == "AUDI":
         for c in all_cars.cars:
             if c.make == "Audi":

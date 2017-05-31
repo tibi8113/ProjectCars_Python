@@ -7,7 +7,7 @@ class Car():
         self.color = color
         self.price = price
         self.type = tipo
-        self.fuel_capacity = 100
+        self.fuel_capacity = 0
         self.fuel_level = 0
 
     def __str__(self):
