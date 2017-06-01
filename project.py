@@ -21,8 +21,28 @@ def menu2():
     if opc4 == "1":
         print("El precio es " + str(coche_seleccionado.price),"euros.")
     elif opc4 == "2":
+
         print("¿Que deseas añadirle?")
-        personalizar1 = input("1.Deposito lleno?\n")
+
+        precio = coche_seleccionado.price
+        personalizar1 = input("1.Camara 3D.\n")
+        personalizar2 = input("2.Neumáticos deportivos.\n")
+        personalizar3 = input("3.Equipo de música avanzado.\n")
+
+        print(str(precio))
+        if personalizar1 == "si":
+            precio = precio + 350
+            print(str(precio))
+        if personalizar2 == "si":
+            precio = precio + 225
+            print(str(precio))
+        if personalizar3 == "si":
+            precio = precio + 500
+            print(str(precio))
+
+ 
+        print("El precio es " + str(precio) + " euros.")
+
         
 
 
